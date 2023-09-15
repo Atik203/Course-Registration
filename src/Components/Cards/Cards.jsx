@@ -9,17 +9,32 @@ const Cards = () => {
   const [totalcredit, setCredit] = useState(20);
   const [TotalSum, setTotalSum] = useState(0);
 
-  const handleCart = (card) => {
-    const newCart = [...carts, card];
-    setCart(newCart);
+  const handleCart = (card, id) => {
+    const isExist = carts.find((item) => item.id === id);
+    if (isExist) {
+      alert("Already Exist");
+    } else {
+      const newCart = [...carts, card];
+      setCart(newCart);
+    }
   };
 
-  const handleTotalsum = (credit) => {
-    setTotalSum(TotalSum + credit);
+  const handleTotalsum = (credit, id) => {
+    const isExist = carts.find((item) => item.id === id);
+    if (!isExist) {
+      setTotalSum(TotalSum + credit);
+    }
   };
 
   const handleCredit = (credit, id) => {
-    setCredit(totalcredit - credit);
+    const isExist = carts.find((item) => item.id === id);
+    if (totalcredit < 0) {
+      return alert("can't add more credit");
+    } else {
+      if (!isExist) {
+        setCredit(totalcredit - credit);
+      }
+    }
   };
 
   useEffect(() => {

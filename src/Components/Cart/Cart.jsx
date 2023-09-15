@@ -11,7 +11,7 @@ const Cart = ({ carts, totalcredit, TotalSum }) => {
         Course Name
       </h3>
 
-      {carts.length > 0 ? ( // Check if carts.length is greater than 0
+      {carts.length > 0 ? (
         <div>
           <hr className="h-[2px] bg-[#1C1B1B33]" />
           <div className="mt-3">

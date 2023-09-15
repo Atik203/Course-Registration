@@ -67,9 +67,9 @@ const Card = ({ card, handleCart, handleCredit, handleTotalsum }) => {
         </div>
         <button
           onClick={() => {
-            handleCart(card);
+            handleCart(card, id);
             handleCredit(credit, id);
-            handleTotalsum(credit);
+            handleTotalsum(credit, id);
           }}
           className="btn btn-primary w-full bg-[#2F80ED] text-white block my-2"
         >
