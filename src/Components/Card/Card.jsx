@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const Card = ({ card, handleCart, handleCredit }) => {
-  const { name, price, img, credit, details } = card;
+const Card = ({ card, handleCart, handleCredit, handleTotalsum }) => {
+  const { id, name, price, img, credit, details } = card;
 
   return (
     <div className="card h-[450px] bg-base-100 shadow-xl">
@@ -68,7 +68,8 @@ const Card = ({ card, handleCart, handleCredit }) => {
         <button
           onClick={() => {
             handleCart(card);
-            handleCredit(credit);
+            handleCredit(credit, id);
+            handleTotalsum(credit);
           }}
           className="btn btn-primary w-full bg-[#2F80ED] text-white block my-2"
         >

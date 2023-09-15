@@ -7,13 +7,18 @@ const Cards = () => {
   const [cards, setCards] = useState([]);
   const [carts, setCart] = useState([]);
   const [totalcredit, setCredit] = useState(20);
+  const [TotalSum, setTotalSum] = useState(0);
+
   const handleCart = (card) => {
     const newCart = [...carts, card];
     setCart(newCart);
   };
 
-  const handleCredit = (credit) => {
-    console.log(credit);
+  const handleTotalsum = (credit) => {
+    setTotalSum(TotalSum + credit);
+  };
+
+  const handleCredit = (credit, id) => {
     setCredit(totalcredit - credit);
   };
 
@@ -32,11 +37,16 @@ const Cards = () => {
             card={card}
             handleCart={handleCart}
             handleCredit={handleCredit}
+            handleTotalsum={handleTotalsum}
           ></Card>
         ))}
       </div>
       <div className="flex-1">
-        <Cart carts={carts} totalcredit={totalcredit}></Cart>
+        <Cart
+          carts={carts}
+          totalcredit={totalcredit}
+          TotalSum={TotalSum}
+        ></Cart>
       </div>
     </div>
   );
