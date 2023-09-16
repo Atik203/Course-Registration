@@ -21,7 +21,7 @@ const Cart = ({ carts, totalcredit, TotalSum }) => {
           </div>
           <hr className="h-[2px] bg-[#1C1B1B33] mt-3" />
           <h3 className="text-[#1C1B1B] font-bold text-lg text-left mt-3">
-            Total Credit: {TotalSum}
+            Total Credit Hour: {TotalSum}
           </h3>
         </div>
       ) : null}
