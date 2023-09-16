@@ -60,4 +60,4 @@ When a user selects a course by clicking the "Select" button, the website checks
 
 ## Demo
 
-Here is the website link: [Live Website](stimulating-book.surge.sh)
+Here is the website link: [Live Website](https://stimulating-book.surge.sh/)
