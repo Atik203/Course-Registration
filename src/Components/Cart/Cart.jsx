@@ -1,4 +1,5 @@
 import SingleCart from "../SingleCart/SingleCart";
+import PropTypes from "prop-types";
 
 const Cart = ({ carts, totalcredit, TotalSum }) => {
   return (
@@ -27,6 +28,12 @@ const Cart = ({ carts, totalcredit, TotalSum }) => {
       ) : null}
     </div>
   );
+};
+
+Cart.protoTypes = {
+  carts: PropTypes.array.isRequired,
+  totalcredit: PropTypes.number.isRequired,
+  TotalSum: PropTypes.number.isRequired,
 };
 
 export default Cart;

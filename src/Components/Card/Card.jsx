@@ -82,6 +82,9 @@ const Card = ({ card, handleCart, handleCredit, handleTotalsum }) => {
 
 Card.propTypes = {
   card: PropTypes.object,
+  handleCart: PropTypes.func,
+  handleCredit: PropTypes.func,
+  handleTotalsum: PropTypes.func,
 };
 
 export default Card;
